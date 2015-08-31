@@ -1,0 +1,31 @@
+<div class="container">
+  <h3>List of Reservations</h3>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>View</th>
+        <th>Id</th>
+        <th>FIRST_NAME</th>
+        <th>LAST_NAME</th>
+        <th>EMAIL</th>
+        <th>PHONE</th>
+        <th>CITY</th>
+        <th>STATE</th>
+        <th>ZIP</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="p in reservVm.people">
+        <td><a ng-href="#/reserv/{{p.id}}"><span class="glyphicon glyphicon-user"></span></a></td>
+        <td>{{p.id}}</td>
+        <td>{{p.firstName}}</td>
+        <td>{{p.lastName}}</td>
+        <td>{{p.email}}</td>
+        <td>{{p.phone}}</td>
+        <td>{{p.city}}</td>
+        <td>{{p.state}}</td>
+        <td>{{p.zip}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

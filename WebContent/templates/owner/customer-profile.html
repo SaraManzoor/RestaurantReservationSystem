@@ -1,0 +1,145 @@
+ <!--<style>-->
+
+
+        <!--.table th, .table td {-->
+            <!--border-top: none !important;-->
+        <!--}-->
+        <!--.panel{-->
+            <!--border-radius: 2px;-->
+        <!--}-->
+
+        <!--td{-->
+            <!--font-weight: normal;-->
+        <!--}-->
+    <!--</style>-->
+ <aside data-spy="affix" data-offset-top="60" data-offset-bottom="50"  width="260" class="col-lg-3 col-sm-4">
+     <div class="panel panel-default">
+
+         <div class="panel-body">
+             <ul class="nav nav-pills nav-stacked">
+                 <!--about the course left menu-->
+                 <li>
+                     <a href="#/view-reservation">
+                         <span class="glyphicon glyphicon-calendar"></span>
+                         <span class="tab-text">Reservations</span>
+                     </a>
+                 </li>
+                 <li>
+                     <a href="#/view-seating">
+                         <span class="glyphicon glyphicon-th"></span>
+                         <span class="tab-text">Seating</span>
+                     </a>
+                 </li>
+                 <li class="active">
+                     <a href="#/view-profile" >
+                         <span class="glyphicon glyphicon-list"></span>
+                         <span class="tab-text">Profile</span>
+                     </a>
+                 </li>
+
+                 <li>
+                     <a href="#/new-reservation" >
+                         <span class="glyphicon glyphicon-user"></span>
+                         <span class="tab-text">New Reservation</span>
+                     </a>
+                 </li>
+             </ul>
+
+         </div> <!--end panel-body-->
+
+     </div><!--navbar-header-->
+
+ </aside>
+
+
+
+
+<section>
+    <div class ="container">
+
+        <div class="col-md-6 col-md-offset-1">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title text-center"> <span class="glyphicon glyphicon-user"> Customer Profile </h3>
+                </div>
+
+                <div class="panel-body">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Name:</label>
+                            <div class="col-sm-9">
+                                <p class="form-control-static">{{custProfileCtrl.reservation.name}}</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">Confirmation No:</label>
+                            <div class="col-sm-8">
+                                <p class="form-control-static">{{custProfileCtrl.reservation.confirmationNum}}</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Email:</label>
+                            <div class="col-sm-9>
+                                <p class="form-control-static">{{custProfileCtrl.reservation.email}}</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Phone:</label>
+                            <div class="col-sm-9">
+                                <p class="form-control-static">{{custProfileCtrl.reservation.phone}}</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Address:</label>
+                            <div class="col-sm-9">
+                                <p class="form-control-static">{{custProfileCtrl.reservation.address}}</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Gender:</label>
+                            <div class="col-sm-9">
+                                <p class="form-control-static">{{custProfileCtrl.reservation.gender}}</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Party Size:</label>
+                            <div class="col-sm-9">
+                                <p class="form-control-static">{{custProfileCtrl.reservation.partySize}}</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Status:</label>
+                            <div class="col-sm-9">
+                                <p class="form-control-static">{{custProfileCtrl.reservation.reservationStatus}}</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Date:</label>
+                            <div class="col-sm-9">
+                                <p class="form-control-static">{{custProfileCtrl.reservation.reservationTime}}</p>
+                            </div>
+                        </div>
+
+                    </form>
+
+
+
+
+
+
+                    </div><!--panel-body-->
+                </div><!--panel-info-->
+
+
+
+            </div><!--offset-5-->
+
+
+
+
+
+        </div><!--container-->
+
+
+
+</section>

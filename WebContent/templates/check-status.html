@@ -1,0 +1,41 @@
+<div class="tab-pane active" id="check_status">
+
+    <div class="row">
+        <div class="col-lg-6" id="check-align">
+            <div class="well well-sm">
+                <div class="input-group">
+                    <input ng-model="confirmationNumb" type="text" class="form-control"
+                           placeholder="Enter confirmation number"> <span
+                        class="input-group-btn">
+               <button ng-click="check(confirmationNumb)" class="btn btn-default"  data-toggle="modal" data-target="#check-status" type="button">Check</button>
+
+            </span>
+
+                </div>
+            </div>
+            <div class="modal-header">
+                <h4 class="modal-title">Confirmation Details</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+
+                    <p>NAME: {{checkStatusVm.reservation.name}}</p>
+                    <p>CONFIRMATION NUMBER: {{checkStatusVm.reservation.confirmationNum}}</p>
+                    <p>PHONE: {{checkStatusVm.reservation.phone}}</p>
+                    <p>EMAIL: {{checkStatusVm.reservation.email}}</p>
+                    <p>TABLE: {{checkStatusVm.reservation.reservationTable}}</p>
+                    <p>STATUS: {{checkStatusVm.reservation.reservationStatus}}</p>
+                    <div class="modal-footer">
+                        <div class="single-btn">
+                            <button class="btn btn-default"><span class="glyphicon glyphicon-remove"></span> OK</button>
+                            <button class="btn btn-primary"><a href="#/customer_edit/{{checkStatusVm.reservation.confirmationNum}}"><span class="glyphicon glyphicon-pencil">Edit</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.col-lg-6 -->
+    </div>
+    <!-- /.row -->
+</div>

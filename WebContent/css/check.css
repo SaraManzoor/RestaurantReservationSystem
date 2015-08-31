@@ -1,0 +1,19 @@
+
+#check-align{
+    margin: 100px 25%;
+}
+
+p{
+    font-size: 14px;
+    font-weight: normal;
+
+}
+#map {
+    width: 500px;
+    height: 400px;
+}
+
+.legend{
+
+    font-weight: bold;
+}

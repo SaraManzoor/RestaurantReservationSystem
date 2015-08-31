@@ -1,0 +1,107 @@
+<aside data-spy="affix" data-offset-top="60" data-offset-bottom="50" width="260" class="col-lg-3 col-sm-4"
+       xmlns="http://www.w3.org/1999/html">
+    <div class="panel panel-default">
+
+        <div class="panel-body">
+            <ul class="nav nav-pills nav-stacked">
+                <!--about the course left menu-->
+                <li class="active" >
+                    <a href="#/view-reservation">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                        <span class="tab-text">Reservations</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#/view-seating">
+                        <span class="glyphicon glyphicon-th"></span>
+                        <span class="tab-text">Seating</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#/owner/edit-rest-profile/6789" >
+                        <span class="glyphicon glyphicon-list"></span>
+                        <span class="tab-text">Profile</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#/new-reservation" >
+                        <span class="glyphicon glyphicon-user"></span>
+                        <span class="tab-text">New Reservation</span>
+                    </a>
+                </li>
+            </ul>
+
+        </div> <!--end panel-body-->
+
+    </div><!--navbar-header-->
+
+</aside>
+
+
+
+
+<div class="container">
+
+<div class=" col-md-6">
+    <div class="input-group row-search">
+        <input type="search" class="form-control" placeholder="Search for..." ng-model="ownerVm.searchText.name">
+                       <span class="input-group-btn">
+                           <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                       </span>
+    </div><!-- /input-group -->
+
+    
+
+        <table class="table table-striped table-bordered">
+            <thead>
+            <tr class="info" ng-init="ownerVm.sorter = 'id'; ownerVm.reverse =false;">
+                <th ng-click="ownerVm.sorter = 'confirm-code'; ownerVm.reverse = ! ownerVm.reverse"> Confirmation Number</th>
+                <th ng-click="ownerVm.sorter = 'name'; ownerVm.reverse = ! ownerVm.reverse"> Name</th>
+                <th ng-click="ownerVm.sorter = 'email'; ownerVm.reverse = ! ownerVm.reverse"> Email</th>
+         
+                <th ng-click="ownerVm.sorter = 'date'; ownerVm.reverse = ! ownerVm.reverse"> Date and Time</th>
+                <th ng-click="ownerVm.sorter = 'guests'; ownerVm.reverse = ! ownerVm.reverse">Status </th>
+                <th ng-click="ownerVm.sorter = 'table'; ownerVm.reverse = ! ownerVm.reverse">Table No. </th>
+      
+                <th ng-click="ownerVm.sorter = 'guests'; ownerVm.reverse = ! ownerVm.reverse"> Table</th>
+             
+                <th> Delete </th>
+            </tr>
+            </thead>
+            <tbody>
+
+            <tr ng-repeat="p in ownerVm.allReservations | filter: ownerVm.searchText | orderBy: ownerVm.sorter: ownerVm.reverse">
+                <td><a ng-href="#/userReservation/{{p.confirmationNum}}"><span class="glyphicon glyphicon-user"></span></a></td>
+                <td>{{p.name}}</td>
+               
+                <td>{{p.email}}</td>
+                
+                <td>{{p.reservationTime}}</td>
+                <td>{{p.reservationStatus}}</td>
+                <td>{{p.reservationTable}}</td>
+
+                <td class="text-center">
+
+                        <a href="#/owner/assign-table/{{p.confirmationNum}}" ng-click="assignTableObj(p)" class="btn btn-success">Assign</a>
+
+                </td>
+                <td class="text-center"><span class="glyphicon glyphicon-trash" ng-click="ownerVm.deleteReservation(p.confirmationNum)"></span></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+<style>
+
+.changethisone span{
+background-color: #FFF;
+}
+
+.changethisone input{
+border-right-style:none;
+}
+
+</style>

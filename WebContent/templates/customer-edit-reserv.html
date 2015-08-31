@@ -1,0 +1,122 @@
+<section>
+    <div class="container">
+
+        <div class="col-md-6 col-md-offset-3" style="padding-top: 35px;">
+
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title text-center">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                        <span class="tab-text">Edit Reservation</span>
+                    </h3>
+                </div>
+
+                <div class="panel-body">
+                    <form class="form-horizontal">
+                        <div class="form-group row">
+                            <label class="col-sm-3 control-label">Name:  </label>
+                            <div class="col-sm-9">
+                                <label><input type="text" ng-model="customerEditVm.editReservationObj.name"></label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label"> Email: </label>
+                            <div class="col-sm-8">
+                                <label><input type="email" ng-model="customerEditVm.editReservationObj.email"></label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label"> Phone: </label>
+                            <div class="col-sm-9">
+                                <label><input type="tel" ng-model="customerEditVm.editReservationObj.phone"></label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Address:  </label>
+                            <div class="col-sm-9">
+                                <label><input type="text" ng-model="customerEditVm.editReservationObj.address"></label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Date:  </label>
+                            <div class="col-sm-9">
+                                <label><input type="date" name="date"
+                                                   ng-model="customerEditVm.date" required></label>
+                            </div>
+                        </div>
+
+                        <!--<div class="form-group">-->
+                            <!--<label class="col-sm-3 control-label"> </label>-->
+                            <!--<div class="col-sm-9">-->
+                                <!--<label>Time: <input type="time" name="time"-->
+                                                     <!--placeholder="HH:MM"-->
+                                                    <!--ng-model="customerEditVm.time" required></label>-->
+                            <!--</div>-->
+                        <!--</div>-->
+
+                        <!--<div class="form-group">-->
+                        <!--<label class="col-sm-3 control-label"> </label>-->
+                        <!--<div class="col-sm-9">-->
+                        <!--<label>Date: <input type="date" name="date"-->
+                        <!--class="form-control" ng-model="customerEditVm.date" required></label>-->
+                        <!--<div ng-messages="reservationForm.date.$error" class="has-error"-->
+                        <!--ng-if="reservationForm.date.$dirty">-->
+                        <!--<p class="help-block" ng-message="required">Date is required-->
+                        <!--</p>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--</div>-->
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Time: </label>
+                            <div class="col-sm-9">
+                                <label><input type="time" name="time"
+                                                    ng-model="customerEditVm.time" required></label>
+                                <!--<div ng-messages="reservationForm.time.$error" class="has-error"-->
+                                     <!--ng-if="reservationForm.time.$dirty">-->
+                                    <!--<p class="help-block" ng-message="required">Time is required-->
+                                    <!--</p>-->
+                                <!--</div>-->
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Party Size: </label>
+                            <div class="col-sm-9">
+                                <label>
+                                    <select ng-model="customerEditVm.editReservationObj.partySize"
+                                            name="table">
+                                        <option value=""></option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                        <option value="13">13</option>
+                                        <option value="14">14</option>
+                                        <option value="15">15</option>
+                                    </select>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="col-md-offset-2 text-center">
+                            <a href="#" class="btn btn-default">Cancel</a>
+                            <a class="btn btn-primary"
+                               ng-click="editReservation(customerEditVm.editReservationObj)">Update</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

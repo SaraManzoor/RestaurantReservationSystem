@@ -1,0 +1,113 @@
+<aside data-spy="affix" data-offset-top="60" data-offset-bottom="50" width="260" class="col-lg-3 col-sm-4"
+       xmlns="http://www.w3.org/1999/html">
+    <div class="panel panel-default">
+
+        <div class="panel-body">
+            <ul class="nav nav-pills nav-stacked">
+                <!--about the course left menu-->
+                <li >
+                    <a href="#/view-reservation">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                        <span class="tab-text">Reservations</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#/view-seating">
+                        <span class="glyphicon glyphicon-th"></span>
+                        <span class="tab-text">Seating</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="#/owner/edit-rest-profile/6789" >
+                        <span class="glyphicon glyphicon-list"></span>
+                        <span class="tab-text">Profile</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#/new-reservation" >
+                        <span class="glyphicon glyphicon-user"></span>
+                        <span class="tab-text">New Reservation</span>
+                    </a>
+                </li>
+            </ul>
+
+        </div> <!--end panel-body-->
+
+    </div><!--navbar-header-->
+
+</aside>
+
+
+<section>
+    <div class="container">
+
+        <div class="col-md-6 col-md-offset-3" style="padding-top: 35px;">
+
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title text-center">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                        <span class="tab-text">Edit Restaurant Details</span>
+                    </h3>
+                </div>
+
+                <div class="panel-body">
+                    <form class="form-horizontal">
+                        <div class="form-group row">
+                            <label class="col-sm-3 control-label"> Name:</label>
+                            <div class="col-sm-9">
+                                <label> <input type="text" ng-model="restProfileVm.editRestaurantObj.restName"></label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label"> Email:  </label>
+                            <div class="col-sm-8">
+                                <label><input type="email" ng-model="restProfileVm.editRestaurantObj.restEmail"></label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label"> Phone: </label>
+                            <div class="col-sm-9">
+                                <label> <input type="text" ng-model="restProfileVm.editRestaurantObj.restPhone"></label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label"> Address:  </label>
+                            <div class="col-sm-9">
+                                <label><input type="text" ng-model="restProfileVm.editRestaurantObj.restAddress"></label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label"> Timings:</label>
+                            <div class="col-sm-9">
+                                <label> <input type="text" name="date"
+                                                      class="form-control" ng-model="restProfileVm.editRestaurantObj.restTimings" required></label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label"> Auto Assign: </label>
+                            <div class="col-sm-9">
+                                <label>
+                                    <input type="radio"  ng-model="restProfileVm.editRestaurantObj.autoAssign" name="auto-assign" value="1">On
+                                    <input type="radio"  ng-model="restProfileVm.editRestaurantObj.autoAssign" name="auto-assign" value="0">Off
+                                    <!--<input type="time" name="time"-->
+                                    <!--class="form-control" placeholder="HH:MM"-->
+                                </label>                  <!--ng-model="customerEditVm.time" required></label>-->
+                            </div>
+                        </div>
+
+                        <div class="col-md-offset-2 text-center">
+                            <a href="#" class="btn btn-default">Cancel</a>
+                            <a class="btn btn-primary"
+                               ng-click="updateRestaurant(restProfileVm.editRestaurantObj)">Update</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
